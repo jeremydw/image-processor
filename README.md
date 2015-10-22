@@ -11,7 +11,7 @@ cd image-processor
 ./setup.sh
 ```
 
-- Modify `config.yaml.txt` and specify the input file, output directory, and processing rules.
+- (Optionally) modify `config.yaml.txt` and specify the input file, output directory, and processing rules. Otherwise, drop a file called `input.png` into the folder and move to the last step.
 - Run the command below.
 
 ```
