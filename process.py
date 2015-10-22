@@ -9,7 +9,7 @@ import os
 import yaml
 
 
-CONFIG_FILE = 'config.yaml'
+CONFIG_FILE = 'config.yaml.txt'
 CONFIG = yaml.load(open(CONFIG_FILE))
 INPUT_PATH = CONFIG['input']
 OUT_DIR = CONFIG['out_dir']
