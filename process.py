@@ -34,10 +34,8 @@ def process(rule):
       background = Image.new('RGBA', size, tuple(background_color))
       offset = (max((size[0] - image.size[0]) / 2, 0), max((size[1] - image.size[1]) / 2, 0))
       image.load()  # Required for split.
-      if INPUT_PATH.endswith('png'):
-        background.paste(image, offset, mask=image.split()[3])
-      else:
-        background.paste(image, offset)
+      mask = image.split()[-1]
+      background.paste(image, offset, mask=mask)
       image = background
     image.save(
         path,
