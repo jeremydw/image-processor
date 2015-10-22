@@ -1,0 +1,60 @@
+input: input.psd
+out_dir: out
+
+rules:
+- name: Homepage
+  size: [450, 200]
+  max: [700, 230]
+  max_filesize: 60
+  format: JPG
+  background: white
+
+- nme: TransparentHomepage
+  size: [450, 200]
+  max: [700, 230]
+  max_filesize: 60
+  format: PNG
+  background: transparent
+
+- name: Medium
+  size: [300, 128]
+  max: [460, 128]
+  max_filesize:
+  background: transparent
+  format: PNG
+
+- name: Results
+  size: [95, 41]
+  background: transparent
+  format: PNG
+  max_fileize: 10
+
+- name: Mobile
+  size: [74, 25]
+  background: transparent
+  format: PNG
+  max_fileize: 10
+
+- name: StaticCTA 
+  size: [450, 200]
+  max: [700, 230]
+  formats: JPG, PNG, GIF
+  background: white
+
+- name: Homepage2x
+  size: [900, 400]
+  max: [1400, 460]
+  formats: JPG, PNG, GIF
+  background: white
+
+- name: LargeAnimatedOnAGSALightGrey
+  size: [900, 400]
+  max: [1400, 460]
+  format: GIF
+  background: "#f2f2f2"
+
+- name: LargeAnimatedOnSpecifiedColor
+  size: [900, 400]
+  max: [1400, 460]
+  format: GIF
+  background: "#f2f2f2"
