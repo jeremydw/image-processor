@@ -1,3 +1,5 @@
 lib
 out
 *.psd
+*Icon*
+.DS_Store

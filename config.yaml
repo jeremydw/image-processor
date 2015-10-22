@@ -1,60 +1,64 @@
-input: input.psd
-out_dir: out
+input: input.png
+out_dir: out/output
 
 rules:
-- name: Homepage
+- name: hp
+  trim: true
   size: [450, 200]
   max: [700, 230]
   max_filesize: 60
-  format: JPG
-  background: white
+  formats:
+  - JPEG
+  background: [255, 255, 255, 1]
 
-- nme: TransparentHomepage
+- name: hpt
+  trim: true
   size: [450, 200]
   max: [700, 230]
   max_filesize: 60
-  format: PNG
-  background: transparent
+  formats:
+  - PNG
 
-- name: Medium
+- name: med
   size: [300, 128]
   max: [460, 128]
   max_filesize:
-  background: transparent
-  format: PNG
+  formats:
+  - PNG
 
-- name: Results
+- name: sr
   size: [95, 41]
-  background: transparent
-  format: PNG
+  formats: [PNG]
   max_fileize: 10
 
-- name: Mobile
+- name: mbl
   size: [74, 25]
-  background: transparent
-  format: PNG
+  formats: [PNG]
   max_fileize: 10
+  padding:
+    bottom: 5
 
-- name: StaticCTA 
+- name: cta
   size: [450, 200]
   max: [700, 230]
-  formats: JPG, PNG, GIF
-  background: white
+  background: [255, 255, 255, 1]
+  formats: [JPEG, PNG, GIF]
 
-- name: Homepage2x
+- name: hp2
+  trim: true
   size: [900, 400]
   max: [1400, 460]
-  formats: JPG, PNG, GIF
-  background: white
+  formats: [JPEG, PNG, GIF]
+  background: [255, 255, 255, 1]
 
-- name: LargeAnimatedOnAGSALightGrey
+- name: agsacolor
   size: [900, 400]
   max: [1400, 460]
-  format: GIF
-  background: "#f2f2f2"
+  formats: [GIF]
+  background: [242, 242, 242, 1]
 
-- name: LargeAnimatedOnSpecifiedColor
+- name: agsagrey
   size: [900, 400]
   max: [1400, 460]
-  format: GIF
-  background: "#f2f2f2"
+  formats: [GIF]
+  background: [242, 242, 242, 1]
